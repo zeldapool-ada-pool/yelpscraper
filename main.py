@@ -129,7 +129,7 @@ async def scrape_reviews(business_url: str, session: ScrapflyClient) -> List[Rev
 async def run():
     scrapfly = ScrapflyClient(key="scp-live-18d16f85e76f4607b72bccbec179ce0d", max_concurrency=2)
     with scrapfly as session:
-        results = await scrape_companies_by_search("cash only", "Kinnelon, New Jersey", session=session)
+        results = await scrape_companies_by_search("Bar", "Kinnelon, New Jersey", session=session)
         total = json.dumps(results)
         print(total)
         return total
